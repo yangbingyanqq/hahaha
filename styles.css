@@ -1,0 +1,858 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(246, 246, 254);
+}
+
+li {
+    list-style: none;
+    /*去掉无序列表的圆点*/
+}
+
+/*顶部白色导航 start */
+.nav {
+    position: relative;
+}
+
+.nav ul {
+    /*设置导航栏中的内容水平居中对齐*/
+    width: 100%;
+    line-height: 40px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    /*按行居中对齐*/
+    overflow: hidden;
+    /*溢出隐藏*/
+}
+
+/*再次设置弹性盒子，保证图片和文字水平*/
+.nav ul li,
+.nav-inside a {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    transition: filter 0.3s ease;
+    /* 添加过渡效果，让颜色变化更平滑，0.3s是过渡时间，可按需调整，ease是过渡的时间函数 */
+}
+
+.nav ul li:hover,
+.nav-inside a:hover {
+    filter: brightness(90%);
+    /* brightness(70%)表示将图片亮度降低，从而使其看起来颜色变深，数值可以根据想要的效果在0% - 100%之间调整 */
+}
+
+/*调整图片大小即位置*/
+.nav ul li img {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    /* 上下居中 */
+}
+
+/*设置超链接初始的下划线不可见*/
+.nav a {
+    text-decoration: none;
+    /* 初始时隐藏元素 */
+    color: black;
+}
+
+/*导航栏里面超链接 star*/
+.nav .nav-inside {
+    position: absolute;
+    margin-top: 40px;
+    /*防止导航栏被覆盖*/
+    width: 120%;
+    height: auto;
+    /* 设置优先级就不会显示背景下面的元素 */
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    display: none;/* 初始状态下隐藏该元素 */
+    margin-right: 340px;/*调整文字左对齐*/
+    box-shadow: 0 100px 150px rgba(74, 75, 74, 0.6),
+                 0 100px 150px rgba(28, 28, 71, 0.7),
+               0 200px 500px  rgba(170, 20, 229, 0.7);/*第一个参数表示右+，-为左，第二个参数表示-上、+下，在下方设置模糊阴影*/
+}
+.nav .inside {
+    width: 900px;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    font-size: 12px;
+    padding-bottom: 40px;
+  
+}
+
+.inside1 ul li {
+    line-height: 0.2;
+}
+
+.inside2 ul li {
+    line-height: 2;
+}
+
+
+.inside-fist {
+    font-size: 10px;
+    color: gray;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.inside ul a {
+    padding-left: 50px;
+}
+
+.inside ul {
+    display: flex;
+    flex-direction: column;
+    /* 使内部的 li 元素垂直排列 */
+}
+
+.nav ul li:hover {
+    color: black;
+}
+
+
+/* 当鼠标悬浮在 "商店" 元素或者下拉菜单本身时显示nav - inside 元素 */
+.nav ul li:nth-child(2):hover~.nav-inside,
+.nav-inside:hover {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+
+/*导航栏里面超链接 end*/
+/*顶部白色导航的下方 star*/
+.nav-under {
+    font-size: 14px;
+    background-color: white;
+    line-height: 40px;
+}
+
+.nav-under a {
+    color: rgb(28, 28, 249);
+    text-decoration: none;
+    /*去掉超链接的下划线*/
+}
+
+.nav-under {
+    display: flex;
+    justify-content: center;
+    /*按行居中对齐*/
+}
+
+.nav-under a:hover {
+    text-decoration: underline;
+    /*悬浮时出现下划线*/
+}
+
+/*顶部白色下方 end*/
+/*顶部白色导航  end */
+
+.top-color {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #0090f7, #ba62fc, #f2416b);
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+    opacity: 0.5;
+}
+
+.color-nav {
+    width: 100%;
+    height: 248px;
+    position: relative;
+}
+
+.warp {
+    width: 1648px;
+    height: 248px;
+    margin: 20px auto 10px 250px;
+}
+
+.color-nav-left {
+    width: 700px;
+    height: 248px;
+    position: absolute;
+    left: 250px;
+}
+
+.color-nav-right {
+    width: 196px;
+    height: 254px;
+    position: absolute;
+    right: 125px;
+    margin-right: auto;
+}
+
+.color-font {
+    width: 490px;
+    height: 120px;
+}
+
+.color-font>h1 {
+    display: inline;
+    /*使元素在一行内从左到右排列*/
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    color: #6e6e73;
+}
+
+.color-nav-left .color-font .color-font-top {
+    width: 280px;
+    height: 50px;
+    letter-spacing: 0.03em;
+    line-height: 1.0834;
+    background-image: linear-gradient(to right, #0090f7, #ba62fc, #f2416b);
+    /*设置彩色渐变*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.right-all {
+    width: 300px;
+    height: 120px;
+}
+
+.expert {
+    width: 200px;
+    height: 58px;
+}
+
+.title {
+    float: right;
+}
+
+.title>p {
+    margin: 0;
+    width: 100%;
+    height: 21px;
+}
+
+.Store {
+    width: 230px;
+    height: 58px;
+}
+
+.store-con {
+    float: right;
+}
+
+.store-con>p {
+    margin: 0;
+}
+
+.title>a {
+    color: #06c;
+}
+
+.store-con>a {
+    text-decoration: none;
+    color: #06c;
+}
+
+.store-con>a:hover {
+    display: block;
+    text-decoration: underline;
+    /*鼠标悬停时显示下划线*/
+}
+
+/*小部分滑动 ，start*/
+
+.xiao-box-nav {
+    width: 136px;
+    height: 136px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.xiao-box-nav .xiao-img {
+    width: 100%;
+    height: 78px;
+    padding: 0 0 12px 0;
+    margin-left: 0 auto;
+    max-height: 78px;
+}
+
+.xaio-a {
+    width: 120px;
+    height: 21px;
+    text-align: center;
+}
+
+.xaio-a>a {
+    letter-spacing: 0;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.xaio-a>:hover {
+    text-decoration: underline;
+    /*鼠标悬停显示下划线*/
+}
+
+/*小部分滑动，end*/
+.silde-img {
+    width: 100%;
+    height: 632px;
+    padding-bottom: 14px;
+}
+
+.silde-box {
+    width: 100%;
+    height: 578px;
+    margin: 20px 0 10px 250px;
+}
+
+.silde-img-title {
+    width: 980px;
+    height: 52px;
+}
+
+.silde-img-title h2,
+span {
+    display: inline;
+    /*设置为一块*/
+}
+
+.silde-h2,
+.silde-span {
+    font-size: 28px;
+    font-weight: 600;
+    color: #6e6e73;
+}
+
+.silde-box-content .silde-img-title .silde-h2 {
+    width: 90px;
+    height: 24px;
+    letter-spacing: 0.03em;
+    line-height: 1.0834;
+    background-image: linear-gradient(to right, #0283df, #1b0bc8, #ba62fc, #f2416b);
+    /*设置彩色渐变*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.silde-img-title h2{
+    margin-left: 0px;
+}
+
+/*文字模块*/
+
+
+.silde-buttom {
+    width: 100%;
+    overflow: hidden;
+    /*溢出不显示*/
+    white-space: nowrap;
+    /*让整个内容居行不换行*/
+}
+
+.silde-img-box {
+    width: 480px;
+    height: 500px;
+    position: relative;
+    display: inline-block;
+    /*让所有图片为一个行内*/
+    margin-right: 16px;
+    /*设置右边距*/
+    margin-bottom: 12px;
+}
+/* 设计四个小盒子 start */
+.silde-img-box-last {
+    float: left;
+    width: 250px;
+    height: 230px;
+    padding-right: 60px;
+}
+
+.silde-img-box-last>div {
+    width: 280px;
+    height: 230px;
+    background-color: white;
+    border-radius: 5%;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.silde-img-box-last>div:first-child {
+    margin-bottom: 30px;
+}
+
+.silde-img-box-last>div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    padding-top: 0px;
+    padding-left: 30px;
+}
+
+.silde-img-box-last img {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/* 设计四个小盒子 end */
+
+.silde-box-all {
+    position: relative;
+    /*.silde-img-buttom的相对父级*/
+}
+
+.silde-img-top {
+    width: 100%;
+}
+
+.silde-img-top>img {
+    border-radius: 18px;
+    /*圆角设置*/
+}
+
+.silde-img-buttom {
+    width: 400px;
+    height: 115px;
+    position: absolute;
+    /*相对于.silde-box-all进行绝对定位*/
+    top: 10px;
+    left: 0px;
+    font-size: 16px;
+    color: #1b1b1f;
+    padding: 25px;
+    margin: 0;
+    line-height: 1.25;
+    /*行高让文字位置更合适*/
+}
+
+/* 调整间距防止重叠 */
+.silde-img-buttom>.silde-desc {
+    margin-top: 25px;
+    width: 450px;
+}
+
+.silde-header {
+    width: 340px;
+    height: 50px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: .007em;
+    margin-top: -25px;
+}
+
+.silde-desc {
+    width: 340px;
+    height: 56px;
+}
+
+.silde-desc b {
+    font-weight: 400;
+}
+
+
+.silde-desc .price {
+    white-space: pre-line;
+    /*换行标签*/
+}
+
+.silde-header a {
+    color: #1d1d1f;
+    display: inline-block;
+    text-decoration: none;
+    /*a标签的下划线不显示*/
+}
+
+.silde-img-box:hover {
+    transform: translateY(-2px);
+    /*设置动画效果*/
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    /*设置阴影*/
+}
+
+/*设置左右滑动的箭头*/
+.arrow-img-box {
+    width: 50px;
+    height: 50px;
+    background: rgb(225, 224, 224);
+    border-radius: 50%;
+    overflow: hidden;
+    /*溢出不显示*/
+    float: right;
+}
+
+.arrowhead img {
+    display: block;
+    /*转化为块级元素*/
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /*向上移动50%，与position和top实现垂直居中*/
+    margin: 0 auto;
+    /*实现水平居中*/
+}
+
+.img-left {
+    position: absolute;
+    /*相对父级为silde-box-all根据他进行绝对定位*/
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.img-right {
+    position: absolute;
+    /*相对父级为silde-box-all根据他进行绝对定位*/
+    right: 9%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.silde-box-all:hover .img-right {
+    display: block;
+}
+
+.silde-box-all:hover .img-left {
+    display: block;
+}
+
+.arrow-img-box:hover {
+    opacity: 0.9;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*图片滑动，end*/
+
+
+
+/*图片滑动2，start*/
+.part4 {
+    width: 100%;
+    height: 632px;
+    padding-bottom: 14px;
+    white-space: nowrap;
+}
+
+.part4>.warp {
+    width: 100%;
+    height: 578px;
+    margin: 20px 0 10px 250px;
+}
+
+.part4-section-top {
+    width: 980px;
+    height: 52px;
+}
+
+.part4-section-top h2 {
+    margin-left: 0px;
+    /* 消除彩色字部分的左边框 */
+}
+
+.part4-section-top h2,
+span {
+    display: inline;
+    font-size: 28px;
+}
+
+.part4-section-top {
+    font-size: 28px;
+    font-weight: 600;
+    color: #6e6e73;
+}
+
+.part4 .part4-section .part4-section-top h2 {
+    width: 90px;
+    height: 24px;
+    letter-spacing: 0.03em;
+    line-height: 1.0834;
+    background-image: linear-gradient(to right, #0090f7, #ba62fc, #f2416b);
+    /*设置彩色渐变*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.part4-section-buttom {
+    /* width: 100%;设置为100%就不会换行 */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    /*让整个内容不换行*/
+    /* 盒子之间的间距 */
+    margin-right: -40px;
+    position: relative;
+
+
+
+}
+
+.part4-section-buttom-image {
+    width: 440px;
+    height: 500px;
+    margin-right: 16px;
+    margin-bottom: 12px;
+}
+
+.part4-section-buttom-image img {
+    border-radius: 5%;
+}
+
+.part4-section-buttom-text-one a {
+    color: #1d1d1f;
+    display: flex;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 54px 30px 30px;
+    position: absolute;
+
+
+
+}
+
+.part4-section-buttom:hover {
+    transform: translateY(-2px);
+    /*设置动画效果*/
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.part4-section-buttom-wrap {
+    height: 500px;
+    width: 400px;
+    display: flex;
+
+}
+
+.part4-section-buttom-image1 {
+    width: 350px;
+    height: 520px;
+    background: white;
+    border-radius: 5%;
+    position: relative;
+    display: inline-block;
+    margin-top: -20px;
+
+
+}
+
+.part4-section-buttom-image1 img {
+    width: 230px;
+    height: 230px;
+    padding: 55px;
+
+}
+
+.part4-section-buttom-text1 {
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 20px;
+}
+
+.part4-section-buttom-text1>ul {
+    margin: auto 0;
+    margin-left: 76px;
+}
+
+.part4-section-buttom-text1 .point {
+    display: inline-block;
+}
+
+.part4-section-buttom-text22 {
+    margin-top: 20px;
+}
+
+.part4-section-buttom-text2 .one {
+    color: #b64400;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.part4-section-buttom-text2 .two {
+    font-weight: 400;
+    font-size: 20px;
+
+}
+
+.part4-section-buttom-text3 {
+    margin-top: 50px;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+.part4-section-buttom-text3 span {
+    font-size: 20px;
+}
+
+/*图片滑动2，end*/
+/* 页脚 start  */
+h2 {
+    margin-left: 70px;
+}
+
+.one-footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.foot {
+    width: 60px;
+    height: 34px;
+    padding: 2px 12px;
+    border: 1.2px solid rgb(72, 71, 71);
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 13px;
+}
+
+.foot a {
+    color: gray;
+    text-decoration: none;
+}
+
+.foot:hover {
+    color: white;
+    background-color: black;
+}
+
+.foot:hover a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer {
+    width: 900px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    color: grey;
+    margin: 0 auto;
+    line-height: 20px;
+    border-bottom: 2px solid rgb(198, 197, 197);
+}
+
+.footer .p {
+    color: grey;
+}
+
+.footer p {
+    padding-top: 20px;
+}
+
+.footer a {
+    color: grey;
+}
+
+.footer-1 {
+    font-size: 14px;
+    color: grey;
+}
+
+.footer-1 p::first-letter {
+    height: 1.2em;
+    width: 1.2em;
+    font-size: 18px;
+}
+
+.footer-1 img {
+    width: 2em;
+    height: 2em;
+}
+
+.footer-1 img {
+    transition: filter 0.3s ease;
+    /* 添加过渡效果，让颜色变化更平滑，0.3s是过渡时间，ease是过渡的时间函数 */
+}
+
+.footer-1 img:hover {
+    filter: brightness(70%);
+    /* brightness(70%)表示将图片亮度降低，从而使其看起来颜色变深，数值可以根据想要的效果在0% - 100%之间调整 */
+}
+
+.footer-link,
+.footer-link1,
+.footer-1 {
+    width: 900px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    /* 子元素左对齐 */
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.footer-1 p {
+    color: grey;
+}
+
+.footer-link ul {
+    width: 180px;
+    margin-left: -40px;
+}
+
+.footer-link a {
+    color: grey;
+    text-decoration: none;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+    /*悬浮时出现下划线*/
+}
+
+.footer-link .s1 {
+    color: rgb(34, 33, 33);
+    font-size: 10px;
+    font-weight: bold;
+    /* 加粗 s1 类的 li 元素 */
+}
+
+.footer-link p {
+    color: grey;
+    border-bottom: 2px solid rgb(198, 197, 197);
+    padding-bottom: 30px;
+}
+
+.footer-link p a {
+    color: rgb(47, 145, 250);
+    text-decoration: underline;
+    /*显示下划线*/
+    padding-bottom: 40px;
+}
+
+.footer-link1 {
+    color: gray;
+}
+
+.footer-link1 a {
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-link1 a:hover {
+    text-decoration: underline;
+    /*显示下划线*/
+}
+
+/* 页脚 end  */
+
